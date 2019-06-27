@@ -1,0 +1,117 @@
+/*imports*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+/*Global properties*/
+*{
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 100%;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+* a, * a:hover{text-decoration: none;}
+* li{list-style-type: none;}
+audio, img, iframe, video{display: inline-block;}
+h1, h2, h3, h4, p{
+    font-family: var(--roboto);
+}
+h2{font-size: 1.8rem;}
+.main, .menu, .row{
+    display: flex;
+}
+:root{
+    --montserrat: 'Montserrat', sans-serif;
+    --roboto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.main{
+    flex-direction: column;}
+.menu, .topo{
+    padding: 0.56rem 1rem;
+}    
+.menu .links li a, .topo .links-topo a{
+    text-transform: uppercase;
+}
+/*Local properties*/
+[class*="col-"]{padding: .9375rem /* 15/16 */;}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu{
+    background-color: #673AB7;
+    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.35);
+}
+.menu .links li{
+    padding: 10px;
+}
+.menu .links li a{
+    color: #fff;
+    display: block;
+    font-family: var(--montserrat);
+    font-size: 0.89rem;
+    font-weight: 600;
+}
+.topo{
+    background-color: #ffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    width: 100%;
+    z-index: 1;
+}
+.topo .links-topo li{
+    padding: 5px 10px;
+}
+.topo .links-topo li a{
+    color: #333;
+    font-family: var(--roboto);
+    font-size: 0.78rem;
+}
+.wrap{
+    background-color: #eee;
+}
+.content{
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 1rem auto;
+    width: 98%;
+}
+.content .container{
+    padding: 1rem 0;
+}
+.content .container .titulo{position: relative;}
+.content .container .titulo::after{
+    background-color: #673AB7;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 42px;
+    width: 40px;
+}
+/*last-desktop*/
+@media(min-width: 48rem){
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .main{
+        flex-direction: row;}
+    .menu{
+        min-height: 100vh;
+        width: 20%;
+    }    
+    .topo .links-topo li{
+        display: inline;
+    }
+    .wrap{
+        width: 80%;
+    }
+}
